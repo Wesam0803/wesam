@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Message</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  #random-message {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  #generate-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: red;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 50px;
+  }
+  #header-text {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+  <div id="header-text">A Message for you Doc</div>
+  <div id="random-message"></div>
+  <button id="generate-btn">Generate Random Message</button>
+
+  <script>
+    // Define an array of your own messages
+    var messages = [
+      ,
+      // Additional messages in Arabic
+      "لا حلم مستحيل عندما يكون الله معك",
+      "لا تقل أنا فاشل بل قل هذه محاولة فاشلة",
+      "القوة الوحيدة التي تمتلكها هي قوة قرارك لهذا لا تقوم بخيانة نفسك من أجل الخوف من الناس",
+      "الانسان يعيش بصبره لا بقوته",
+      "في البداية يبدو الأمر مستحيلًا ،، حتى يتحقق و يصبح واقعا",
+      "انتقم بنجاحك و اقتل بصمتك و عاقب بغيابك و انتصر بإبتسامتك",
+      "لا يوجد انسان ضعيف بل يوجد من لا يعرف مواطن قوته",
+      "اذا اردت ان توقف شيء ، توقف عن الكسل ، توقف عن إختلاق الأعذار ، توقف عن إنتظار الوقت المناسب.",
+      "ليس كل فقد خسارة ، بل هنالك فقد يكسب مناعة ضد الصدمات و قدرت التعايش معها",
+      "أكبر خطأ في حياتك أن تتنازل عن مبادئك '' غاندي",
+      "مَرَاتِبُ المَجدِ لَا يَرقَىٰ لَهَا أبَدَا.. مَن هَمُّهُ النَّاسُ مَا قَالُوا ومَا فَعَلُوا!",
+      "في كل مرة يقوم الناس بتحطيمك سيعيد الله بناءك لا تحزن",
+      "هل تريد أن تصبح قويا ؟ تعلم كيف تقاتل وحيدا",
+      "هدف بدون اصرار و عزيمة لا معنى له",
+      "المسافة بينك و بين هدفك هي العمل",
+      "راقب افكارك لأنها ستصبح واقعك",
+      "النجاح ليس مصادفة بل هو حصيلة تخطيط جاد و عمل شاق",
+      "البلاء و الشدة تعلم الانسان أكثر من الرخاء و العافية",
+      "الجميع يريدون أن يأكلوا لكن القليل من يريد الصيد",
+    ];
+
+    // Function to generate a random message
+    function generateRandomMessage() {
+      var randomIndex = Math.floor(Math.random() * messages.length);
+      var randomMessage = messages[randomIndex];
+      document.getElementById('random-message').textContent = randomMessage;
+    }
+
+    // Generate a random message when the button is clicked
+    document.getElementById('generate-btn').addEventListener('click', generateRandomMessage);
+
+    // Initial random message on page load
+    generateRandomMessage();
+  </script>
+</body>
+</html>
